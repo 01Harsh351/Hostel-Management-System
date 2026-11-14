@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings — UniStay Admin ERP</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="admin-settings">
+    <div class="erp-shell">
+      <aside id="erp-sidebar" class="erp-sidebar admin-sidebar"></aside>
+      <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+      <div class="erp-main">
+        <header id="erp-topbar" class="erp-topbar"></header>
+
+        <main class="erp-content">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">Portal &amp; Account Settings</h1>
+              <p class="page-subtitle">Manage your administrator account details and verify backend database connectivity.</p>
+            </div>
+          </div>
+
+          <div class="dashboard-equal-split">
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Administrator Profile</h2>
+                  <p class="panel-subtitle">Update your warden display name and contact phone</p>
+                </div>
+              </div>
+              <div class="panel-body">
+                <form id="admin-profile-form" novalidate style="display:flex;flex-direction:column;gap:16px;">
+                  <div class="form-group">
+                    <label for="admin-prof-name" class="form-label">Full Name <span class="required-mark">*</span></label>
+                    <input id="admin-prof-name" name="fullName" type="text" class="form-control" required />
+                    <div class="field-error" data-error-for="fullName"></div>
+                  </div>
+                  <div class="form-group">
+                    <label for="admin-prof-email" class="form-label">Official Email</label>
+                    <input id="admin-prof-email" name="email" type="email" class="form-control" readonly style="background:var(--bg-subtle);" />
+                  </div>
+                  <div class="form-group">
+                    <label for="admin-prof-contact" class="form-label">Contact Number <span class="required-mark">*</span></label>
+                    <input id="admin-prof-contact" name="contactNumber" type="tel" class="form-control font-mono" required />
+                    <div class="field-error" data-error-for="contactNumber"></div>
+                  </div>
+                  <div class="form-group">
+                    <label for="admin-prof-role" class="form-label">Access Role</label>
+                    <input id="admin-prof-role" name="roleLabel" type="text" class="form-control" readonly style="background:var(--bg-subtle);" />
+                  </div>
+                  <div>
+                    <button type="submit" id="admin-save-profile-btn" class="btn btn-primary">Save Profile Changes</button>
+                  </div>
+                </form>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Backend &amp; MongoDB Atlas Status</h2>
+                  <p class="panel-subtitle">Live response from <span class="font-mono">/api/health</span></p>
+                </div>
+                <button type="button" id="refresh-health-btn" class="btn btn-secondary btn-sm">Refresh Check</button>
+              </div>
+              <div id="admin-health-panel" class="panel-body">
+                <div class="skeleton-block" style="height:100px;"></div>
+              </div>
+            </section>
+          </div>
+
+          <section class="panel">
+            <div class="panel-header">
+              <div>
+                <h2 class="panel-title">Sample Campus Hostels &amp; Rooms</h2>
+                <p class="panel-subtitle">Populate realistic Boys and Girls residence halls and starter rooms in MongoDB Atlas (<span class="font-mono">hostelDB</span>) if your database is empty.</p>
+              </div>
+              <button type="button" id="seed-sample-campus-btn" class="btn btn-indigo btn-sm">Load Sample Hostels &amp; Rooms</button>
+            </div>
+            <div id="seed-sample-feedback" class="panel-body" style="color:var(--text-secondary);font-size:0.875rem;">
+              Seeds 3 sample residence halls (Aryabhatta Residence Hall, Sarojini Residence Hall, Vikram Sarabhai Annex) and 8 starter rooms without overwriting existing MongoDB records.
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="js/admin.js"></script>
+  </body>
+</html>

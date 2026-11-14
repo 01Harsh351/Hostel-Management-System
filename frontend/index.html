@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniStay — University Hostel Management System</title>
+    <meta
+      name="description"
+      content="University ERP Hostel Management System for student room applications, allocation administration, maintenance tracking, and occupancy analytics."
+    />
+    <meta property="og:title" content="UniStay — University Hostel Management System" />
+    <meta
+      property="og:description"
+      content="University ERP Hostel Management System for student room applications, allocation administration, and maintenance tracking."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a href="index.html" class="brand-wordmark">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+              <path d="M10 6h4" />
+              <path d="M10 10h4" />
+              <path d="M10 14h4" />
+              <path d="M10 18h4" />
+            </svg>
+          </span>
+          <span>UniStay ERP</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#modules">Modules</a>
+          <a href="#portals">Portals</a>
+          <a href="login.html">Student Login</a>
+          <a href="register.html">Register</a>
+          <a href="admin-login.html">Admin Console</a>
+        </nav>
+
+        <div class="site-header-action">
+          <a href="login.html" class="btn btn-primary btn-sm">Student Portal</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <span class="hero-kicker">University Residential Administration</span>
+              <h1 class="hero-title">Campus Hostel Allocation &amp; Maintenance ERP</h1>
+              <p class="hero-subtitle">
+                Centralized housing operations for students and hostel wardens. Browse live room availability, submit
+                allocation requests, track maintenance complaints, and administer campus residence halls from one structured portal.
+              </p>
+              <div class="hero-actions">
+                <a href="login.html" class="btn btn-primary btn-lg">Sign In as Student</a>
+                <a href="register.html" class="btn btn-secondary btn-lg">Register Student Account</a>
+              </div>
+              <div style="font-size:0.84375rem;color:var(--text-muted);margin-top:4px;">
+                Hostel Administrator?
+                <a href="admin-login.html" class="text-link">Enter via Admin Console</a>
+              </div>
+            </div>
+
+            <div class="hero-media">
+              <img
+                src="assets/images/campus_residence_hero.jpg"
+                alt="Modern university residential college building and campus walkway"
+                referrerpolicy="no-referrer"
+              />
+            </div>
+          </div>
+
+          <div class="hero-metrics-strip" id="landing-metrics-strip">
+            <div class="metric-strip-item">
+              <span class="metric-strip-value">Single · Double · Triple</span>
+              <span class="metric-strip-label">Supported Residence Room Capacities</span>
+            </div>
+            <div class="metric-strip-item">
+              <span class="metric-strip-value">Live Allocation</span>
+              <span class="metric-strip-label">Atomic Seat &amp; Occupancy Governance</span>
+            </div>
+            <div class="metric-strip-item">
+              <span class="metric-strip-value">Maintenance Desk</span>
+              <span class="metric-strip-label">Structured Facility Issue Tracking</span>
+            </div>
+            <div class="metric-strip-item">
+              <span class="metric-strip-value">JWT + RBAC</span>
+              <span class="metric-strip-label">Role-Isolated Student &amp; Admin Portals</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="modules" class="landing-section surface-alt">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Core System Modules</h2>
+              <p class="section-desc">
+                Integrated residential administration workflows connecting student applications, warden governance, and facility maintenance.
+              </p>
+            </div>
+          </div>
+
+          <div class="portal-cards-grid">
+            <article class="erp-card">
+              <div class="erp-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M2 4v16" />
+                  <path d="M2 8h18a2 2 0 0 1 2 2v10" />
+                  <path d="M2 17h20" />
+                  <path d="M6 8v9" />
+                </svg>
+              </div>
+              <h3 class="erp-card-title">Room Availability &amp; Application</h3>
+              <p class="erp-card-text">
+                Students inspect real-time room capacities across Boys and Girls hostels, filter open Single, Double, or
+                Triple rooms, and submit allocation applications directly to the warden queue.
+              </p>
+              <div>
+                <a href="login.html" class="text-link" style="font-size:0.875rem;">Open Student Login &rarr;</a>
+              </div>
+            </article>
+
+            <article class="erp-card">
+              <div class="erp-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                </svg>
+              </div>
+              <h3 class="erp-card-title">Allocation Governance</h3>
+              <p class="erp-card-text">
+                Wardens configure campus halls and room capacities, review pending student applications, and atomically
+                approve or reject room assignments without exceeding bed limits.
+              </p>
+              <div>
+                <a href="admin-login.html" class="text-link" style="font-size:0.875rem;">Open Admin Console &rarr;</a>
+              </div>
+            </article>
+
+            <article class="erp-card">
+              <div class="erp-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M3 3v16a2 2 0 0 0 2 2h16" />
+                  <path d="M18 17V9" />
+                  <path d="M13 17V5" />
+                  <path d="M8 17v-3" />
+                </svg>
+              </div>
+              <h3 class="erp-card-title">Maintenance &amp; Analytics</h3>
+              <p class="erp-card-text">
+                Track Electricity, Plumbing, and Water maintenance tickets from submission through warden resolution,
+                paired with live occupancy charts across all residence halls.
+              </p>
+              <div>
+                <a href="register.html" class="text-link" style="font-size:0.875rem;">Register Student Account &rarr;</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="portals" class="landing-section">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Role-Separated Campus Portals</h2>
+              <p class="section-desc">
+                Student self-service and administrative governance operate on dedicated, role-isolated interfaces backed by MongoDB Atlas.
+              </p>
+            </div>
+          </div>
+
+          <div class="portal-entry-split">
+            <article class="portal-entry-card">
+              <div>
+                <span class="status-tag status-info" style="margin-bottom:12px;">Student Self-Service</span>
+                <h3 style="font-size:1.25rem;margin-bottom:8px;">Student Housing Portal</h3>
+                <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:16px;">
+                  Designed for incoming and returning students to manage residential life and room applications.
+                </p>
+                <ul class="portal-entry-list">
+                  <li>View current hostel allocation, room number, and roommate details</li>
+                  <li>Filter available Single, Double, and Triple rooms by hostel</li>
+                  <li>Submit room requests and track warden approval status</li>
+                  <li>Log and monitor Electricity, Plumbing, and Water complaints</li>
+                </ul>
+              </div>
+              <div style="display:flex;gap:10px;flex-wrap:wrap;">
+                <a href="login.html" class="btn btn-primary">Student Login</a>
+                <a href="register.html" class="btn btn-secondary">New Student Registration</a>
+              </div>
+            </article>
+
+            <article class="portal-entry-card">
+              <div>
+                <span class="status-tag status-neutral" style="margin-bottom:12px;">Restricted Administration</span>
+                <h3 style="font-size:1.25rem;margin-bottom:8px;">Warden &amp; Admin Console</h3>
+                <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:16px;">
+                  Separate secure entry point for hostel wardens and residential estates staff. No public self-signup.
+                </p>
+                <ul class="portal-entry-list">
+                  <li>Monitor live operational KPIs, pending queues, and hostel occupancy charts</li>
+                  <li>Add and update campus hostels, room capacities, and bed counts</li>
+                  <li>Review, approve, or reject student room allocation requests</li>
+                  <li>Assign resolution updates and close maintenance tickets</li>
+                </ul>
+              </div>
+              <div style="display:flex;gap:10px;flex-wrap:wrap;">
+                <a href="admin-login.html" class="btn btn-indigo">Admin Portal Login</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer-inner">
+        <div>UniStay Hostel Management System · University Residential ERP</div>
+        <div class="footer-links">
+          <a href="login.html">Student Login</a>
+          <a href="register.html">Student Registration</a>
+          <a href="admin-login.html">Admin Console</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

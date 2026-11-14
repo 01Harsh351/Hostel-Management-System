@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Profile — UniStay ERP</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="student-profile">
+    <div class="erp-shell">
+      <aside id="erp-sidebar" class="erp-sidebar"></aside>
+      <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+      <div class="erp-main">
+        <header id="erp-topbar" class="erp-topbar"></header>
+
+        <main class="erp-content">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">Student Profile</h1>
+              <p class="page-subtitle">Review your university residential identity and update contact details.</p>
+            </div>
+          </div>
+
+          <section class="panel" style="max-width:760px;">
+            <div class="panel-header">
+              <h2 class="panel-title">Personal &amp; Academic Details</h2>
+            </div>
+            <div class="panel-body">
+              <form id="student-profile-form" style="display:flex;flex-direction:column;gap:18px;">
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="prof-name" class="form-label">Full Name</label>
+                    <input id="prof-name" name="fullName" type="text" class="form-control" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="prof-id" class="form-label">Student ID</label>
+                    <input id="prof-id" name="studentId" type="text" class="form-control font-mono" readonly style="background:var(--bg-subtle);" />
+                  </div>
+                  <div class="form-group">
+                    <label for="prof-email" class="form-label">University Email</label>
+                    <input id="prof-email" name="email" type="email" class="form-control" readonly style="background:var(--bg-subtle);" />
+                  </div>
+                  <div class="form-group">
+                    <label for="prof-contact" class="form-label">Contact Number</label>
+                    <input id="prof-contact" name="contactNumber" type="tel" class="form-control font-mono" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="prof-dept" class="form-label">Department</label>
+                    <input id="prof-dept" name="department" type="text" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label for="prof-year" class="form-label">Academic Year</label>
+                    <input id="prof-year" name="year" type="text" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label for="prof-gender" class="form-label">Gender</label>
+                    <input id="prof-gender" name="gender" type="text" class="form-control" readonly style="background:var(--bg-subtle);" />
+                  </div>
+                </div>
+                <div>
+                  <button type="submit" id="save-profile-btn" class="btn btn-primary">Save Profile Changes</button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="js/student.js"></script>
+  </body>
+</html>

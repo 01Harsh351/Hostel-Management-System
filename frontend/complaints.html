@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maintenance &amp; Complaints — UniStay ERP</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="complaints">
+    <div class="erp-shell">
+      <aside id="erp-sidebar" class="erp-sidebar"></aside>
+      <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+      <div class="erp-main">
+        <header id="erp-topbar" class="erp-topbar"></header>
+
+        <main class="erp-content">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">Maintenance &amp; Complaints</h1>
+              <p class="page-subtitle">Submit room facility issues and monitor repair progress.</p>
+            </div>
+          </div>
+
+          <div class="dashboard-split">
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Submit New Complaint</h2>
+                  <p class="panel-subtitle">All tickets are routed to the Hostel Maintenance Office</p>
+                </div>
+              </div>
+              <div class="panel-body">
+                <form id="complaint-submit-form" novalidate style="display:flex;flex-direction:column;gap:16px;">
+                  <div class="form-group">
+                    <label for="complaint-category" class="form-label">
+                      <span>Complaint Category</span>
+                      <span class="required-mark">*</span>
+                    </label>
+                    <select id="complaint-category" name="category" class="form-control" required>
+                      <option value="">Select category...</option>
+                      <option value="Electricity">Electricity</option>
+                      <option value="Plumbing">Plumbing</option>
+                      <option value="Water">Water</option>
+                      <option value="Other">Other</option>
+                    </select>
+                    <div class="field-error" data-error-for="category"></div>
+                  </div>
+
+                  <div class="form-grid">
+                    <div class="form-group">
+                      <label for="complaint-hostel" class="form-label">
+                        <span>Hostel</span>
+                        <span class="required-mark">*</span>
+                      </label>
+                      <select id="complaint-hostel" name="hostelId" class="form-control" required>
+                        <option value="">Select hostel...</option>
+                      </select>
+                      <div class="field-error" data-error-for="hostelId"></div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="complaint-room" class="form-label">
+                        <span>Room Number</span>
+                        <span class="required-mark">*</span>
+                      </label>
+                      <input id="complaint-room" name="roomNumber" type="text" class="form-control font-mono" placeholder="e.g. N-204" required />
+                      <div class="field-error" data-error-for="roomNumber"></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="complaint-description" class="form-label">
+                      <span>Issue Description</span>
+                      <span class="required-mark">*</span>
+                    </label>
+                    <textarea
+                      id="complaint-description"
+                      name="description"
+                      class="form-control"
+                      placeholder="Describe the location and exact issue (minimum 12 characters)..."
+                      required
+                    ></textarea>
+                    <div class="field-error" data-error-for="description"></div>
+                  </div>
+
+                  <button type="submit" id="complaint-submit-btn" class="btn btn-primary">
+                    Submit Maintenance Complaint
+                  </button>
+                </form>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Complaint History</h2>
+                  <p class="panel-subtitle">Your submitted maintenance tickets</p>
+                </div>
+                <div>
+                  <label for="complaints-status-filter" class="sr-only">Filter complaints by status</label>
+                  <select id="complaints-status-filter" class="form-control" style="min-height:36px;padding:5px 10px;width:auto;">
+                    <option value="All">All Statuses</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Resolved">Resolved</option>
+                  </select>
+                </div>
+              </div>
+              <div id="complaints-history-wrap"></div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="js/complaints.js"></script>
+  </body>
+</html>

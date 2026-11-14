@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard — UniStay ERP</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="student-dashboard">
+    <div class="erp-shell">
+      <aside id="erp-sidebar" class="erp-sidebar"></aside>
+      <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+      <div class="erp-main">
+        <header id="erp-topbar" class="erp-topbar"></header>
+
+        <main class="erp-content">
+          <div class="page-header">
+            <div>
+              <h1 id="student-welcome-heading" class="page-title">Student Housing Dashboard</h1>
+              <p class="page-subtitle">Your allocation status, room details, live room availability, and maintenance updates.</p>
+            </div>
+            <div class="page-actions">
+              <a href="rooms.html" class="btn btn-secondary btn-sm">Find a Room</a>
+              <a href="room-application.html" class="btn btn-primary btn-sm">Apply for Hostel</a>
+              <a href="complaints.html" class="btn btn-secondary btn-sm">Raise Complaint</a>
+            </div>
+          </div>
+
+          <section id="student-kpi-grid" class="kpi-grid" aria-label="Student housing summary">
+            <div class="kpi-card"><div class="skeleton-block" style="width:60%;"></div><div class="skeleton-block" style="height:28px;width:45%;"></div></div>
+            <div class="kpi-card"><div class="skeleton-block" style="width:60%;"></div><div class="skeleton-block" style="height:28px;width:45%;"></div></div>
+            <div class="kpi-card"><div class="skeleton-block" style="width:60%;"></div><div class="skeleton-block" style="height:28px;width:45%;"></div></div>
+            <div class="kpi-card"><div class="skeleton-block" style="width:60%;"></div><div class="skeleton-block" style="height:28px;width:45%;"></div></div>
+          </section>
+
+          <div class="dashboard-split">
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Allocated Room &amp; Roommates</h2>
+                  <p class="panel-subtitle">Current residential assignment details</p>
+                </div>
+                <a href="my-room.html" class="text-link" style="font-size:0.8125rem;">View Room Details</a>
+              </div>
+              <div id="student-room-summary" class="panel-body">
+                <div class="skeleton-block" style="height:120px;"></div>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Available Rooms Snapshot</h2>
+                  <p class="panel-subtitle">Live openings across campus residence halls</p>
+                </div>
+                <a href="rooms.html" class="text-link" style="font-size:0.8125rem;">Browse All Rooms</a>
+              </div>
+              <div id="student-available-rooms-summary" class="panel-body">
+                <div class="skeleton-block" style="height:120px;"></div>
+              </div>
+            </section>
+          </div>
+
+          <div class="dashboard-equal-split">
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Recent Updates</h2>
+                  <p class="panel-subtitle">Latest application decisions and complaint tickets</p>
+                </div>
+                <a href="my-requests.html" class="text-link" style="font-size:0.8125rem;">My Applications</a>
+              </div>
+              <div id="student-activity-list" class="panel-body">
+                <div class="skeleton-block" style="height:120px;"></div>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Student Profile Information</h2>
+                  <p class="panel-subtitle">Registered academic and contact record</p>
+                </div>
+                <a href="profile.html" class="btn btn-secondary btn-sm">Edit Profile</a>
+              </div>
+              <div id="student-profile-summary" class="panel-body">
+                <div class="skeleton-block" style="height:90px;"></div>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="js/student.js"></script>
+  </body>
+</html>

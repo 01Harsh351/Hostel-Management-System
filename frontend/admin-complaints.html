@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maintenance Management — UniStay Admin ERP</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="admin-complaints">
+    <div class="erp-shell">
+      <aside id="erp-sidebar" class="erp-sidebar admin-sidebar"></aside>
+      <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+      <div class="erp-main">
+        <header id="erp-topbar" class="erp-topbar"></header>
+
+        <main class="erp-content">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">Maintenance Management</h1>
+              <p class="page-subtitle">Review student maintenance complaints and mark verified repairs as Resolved.</p>
+            </div>
+          </div>
+
+          <section class="filter-toolbar" aria-label="Complaint filters">
+            <div class="filter-controls">
+              <div class="filter-field">
+                <label for="admin-complaints-status">Status</label>
+                <select id="admin-complaints-status" class="form-control">
+                  <option value="All">All Statuses</option>
+                  <option value="Pending">Pending</option>
+                  <option value="Resolved">Resolved</option>
+                </select>
+              </div>
+              <div class="filter-field">
+                <label for="admin-complaints-category">Category</label>
+                <select id="admin-complaints-category" class="form-control">
+                  <option value="All">All Categories</option>
+                  <option value="Electricity">Electricity</option>
+                  <option value="Plumbing">Plumbing</option>
+                  <option value="Water">Water</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="filter-field" style="flex:1;">
+                <label for="admin-complaints-search">Search Tickets</label>
+                <input id="admin-complaints-search" type="search" class="form-control" placeholder="Search by ID, student, room, or issue..." />
+              </div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-header">
+              <h2 class="panel-title">Campus Maintenance Queue</h2>
+            </div>
+            <div id="admin-complaints-table-wrap"></div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="js/admin.js"></script>
+  </body>
+</html>

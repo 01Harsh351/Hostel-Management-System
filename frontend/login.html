@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Entry — UniStay Hostel Management System</title>
+    <meta name="description" content="Enter the UniStay Student Housing Portal." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="auth-shell">
+      <aside class="auth-aside">
+        <div class="auth-aside-top">
+          <a href="index.html" class="auth-aside-brand">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+                <path d="M10 6h4" />
+                <path d="M10 10h4" />
+                <path d="M10 14h4" />
+              </svg>
+            </span>
+            <span>UniStay ERP</span>
+          </a>
+          <a href="index.html" class="auth-aside-back">&larr; Campus Overview</a>
+        </div>
+
+        <div class="auth-aside-content">
+          <span class="auth-aside-kicker">Student Residential Entry</span>
+          <h1 class="auth-aside-title">Manage Your Campus Housing &amp; Requests</h1>
+          <p class="auth-aside-desc">
+            Enter your student details to access your housing dashboard, browse available campus rooms, submit
+            allocation requests, and raise facility maintenance tickets directly with the warden office.
+          </p>
+          <div class="auth-aside-photo">
+            <img
+              src="assets/images/hostel_room_interior.jpg"
+              alt="Clean sunlit university student hostel room interior"
+              referrerpolicy="no-referrer"
+            />
+            <div class="auth-aside-photo-caption">
+              <span class="auth-aside-photo-title">On-Campus Residence Halls</span>
+              <span class="auth-aside-photo-meta">Single, Double &amp; Triple Occupancy</span>
+            </div>
+          </div>
+
+          <div class="auth-aside-facts">
+            <div class="auth-fact-item">
+              <span class="auth-fact-value">Live Inventory</span>
+              <span class="auth-fact-label">Real-time bed counts</span>
+            </div>
+            <div class="auth-fact-item">
+              <span class="auth-fact-value">1-Click Apply</span>
+              <span class="auth-fact-label">Track approval status</span>
+            </div>
+            <div class="auth-fact-item">
+              <span class="auth-fact-value">Helpdesk</span>
+              <span class="auth-fact-label">Direct warden tickets</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="auth-aside-footer">
+          <span>UniStay Student Portal</span>
+          <a href="admin-login.html" style="color:#c7d2fe;font-weight:600;">Admin Console &rarr;</a>
+        </div>
+      </aside>
+
+      <main class="auth-main">
+        <div class="auth-card">
+          <div class="auth-mobile-brand">
+            <a href="index.html" class="brand-wordmark">
+              <span class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+                  <path d="M10 6h4" />
+                  <path d="M10 10h4" />
+                </svg>
+              </span>
+              <span>UniStay ERP</span>
+            </a>
+            <a href="index.html" class="text-link" style="font-size:0.8125rem;">Home</a>
+          </div>
+
+          <nav class="entry-mode-tabs" aria-label="Portal entry mode">
+            <a href="login.html" class="entry-mode-tab active" aria-current="page">Student Sign In</a>
+            <a href="register.html" class="entry-mode-tab">Student Sign Up</a>
+            <a href="admin-login.html" class="entry-mode-tab">Admin Console</a>
+          </nav>
+
+          <div class="auth-card-header">
+            <span class="auth-card-kicker">Student Housing Portal</span>
+            <h2 class="auth-card-title">Enter Student Portal</h2>
+            <p class="auth-card-subtitle">Provide your university email to open your student housing dashboard directly—no password required.</p>
+          </div>
+
+          <div id="auth-feedback" class="alert-banner alert-danger" hidden role="alert">
+            <span data-alert-text></span>
+          </div>
+
+          <form id="student-login-form" novalidate style="display:flex;flex-direction:column;gap:16px;">
+            <div class="form-group">
+              <label for="login-name" class="form-label">
+                <span>Student Name (Optional)</span>
+              </label>
+              <input
+                id="login-name"
+                name="fullName"
+                type="text"
+                class="form-control"
+                placeholder="e.g. Aarav Sharma"
+                autocomplete="name"
+              />
+              <div class="field-error" data-error-for="fullName"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="login-email" class="form-label">
+                <span>University Email</span>
+              </label>
+              <input
+                id="login-email"
+                name="email"
+                type="email"
+                class="form-control"
+                placeholder="student@university.edu"
+                autocomplete="email"
+              />
+              <div class="field-error" data-error-for="email"></div>
+            </div>
+
+            <button type="submit" id="student-login-submit" class="btn btn-primary btn-lg" style="width:100%;">
+              Enter Student Portal
+            </button>
+          </form>
+
+          <div class="sample-entry-bar">
+            <span>Pre-fill sample student details for quick entry.</span>
+            <button type="button" id="fill-sample-student-login-btn" class="btn btn-secondary btn-sm">
+              Fill Sample Entry
+            </button>
+          </div>
+
+          <div class="auth-footer-links">
+            <span>New student? <a href="register.html" class="text-link">Create Student Account</a></span>
+            <a href="admin-login.html" class="text-link">Warden &amp; Admin Entry</a>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="js/auth.js"></script>
+  </body>
+</html>

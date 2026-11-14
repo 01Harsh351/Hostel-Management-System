@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard — UniStay ERP</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="admin-dashboard">
+    <div class="erp-shell">
+      <aside id="erp-sidebar" class="erp-sidebar admin-sidebar"></aside>
+      <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+      <div class="erp-main">
+        <header id="erp-topbar" class="erp-topbar"></header>
+
+        <main class="erp-content">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">Hostel Operations Overview</h1>
+              <p class="page-subtitle">Live residence occupancy, student applications, and maintenance administration.</p>
+            </div>
+            <div class="page-actions">
+              <a href="admin-requests.html" class="btn btn-indigo btn-sm">Review Applications</a>
+              <a href="admin-reports.html" class="btn btn-secondary btn-sm">Reports &amp; Analytics</a>
+            </div>
+          </div>
+
+          <section id="admin-quick-actions" class="quick-actions-grid" aria-label="Administrative quick actions">
+            <a href="admin-hostels.html" class="quick-action-link">
+              <span class="quick-action-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/></svg>
+              </span>
+              <div>
+                <div class="quick-action-title">Manage Hostels</div>
+                <div class="quick-action-sub">Add or edit residence halls</div>
+              </div>
+            </a>
+            <a href="admin-rooms.html" class="quick-action-link">
+              <span class="quick-action-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 4h3a2 2 0 0 1 2 2v14"/><path d="M2 20h3"/><path d="M13 20h9"/><path d="M13 4.562v16.157a1 1 0 0 1-1.242.97L5 20V5.562a2 2 0 0 1 1.515-1.94l4-1A2 2 0 0 1 13 4.561Z"/></svg>
+              </span>
+              <div>
+                <div class="quick-action-title">Room Inventory</div>
+                <div class="quick-action-sub">Configure rooms &amp; bed limits</div>
+              </div>
+            </a>
+            <a href="admin-requests.html" class="quick-action-link">
+              <span class="quick-action-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
+              </span>
+              <div>
+                <div class="quick-action-title">Pending Approvals</div>
+                <div class="quick-action-sub">Approve or reject requests</div>
+              </div>
+            </a>
+            <a href="admin-complaints.html" class="quick-action-link">
+              <span class="quick-action-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </span>
+              <div>
+                <div class="quick-action-title">Resolve Complaints</div>
+                <div class="quick-action-sub">Process maintenance tickets</div>
+              </div>
+            </a>
+          </section>
+
+          <section id="admin-kpi-grid" class="kpi-grid-7" aria-label="Operational KPIs">
+            <div class="kpi-card"><div class="skeleton-block" style="width:65%;"></div><div class="skeleton-block" style="height:28px;width:45%;"></div></div>
+            <div class="kpi-card"><div class="skeleton-block" style="width:65%;"></div><div class="skeleton-block" style="height:28px;width:45%;"></div></div>
+            <div class="kpi-card"><div class="skeleton-block" style="width:65%;"></div><div class="skeleton-block" style="height:28px;width:45%;"></div></div>
+            <div class="kpi-card"><div class="skeleton-block" style="width:65%;"></div><div class="skeleton-block" style="height:28px;width:45%;"></div></div>
+          </section>
+
+          <div class="dashboard-equal-split">
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Hostel-Wise Room Utilization</h2>
+                  <p class="panel-subtitle">Occupied beds vs. total capacity across campus halls</p>
+                </div>
+              </div>
+              <div id="admin-occupancy-chart" class="panel-body"></div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Room Inventory Status</h2>
+                  <p class="panel-subtitle">Available rooms vs. full capacity rooms</p>
+                </div>
+              </div>
+              <div id="admin-rooms-chart" class="panel-body"></div>
+            </section>
+          </div>
+
+          <section class="panel">
+            <div class="panel-header">
+              <div>
+                <h2 class="panel-title">Pending Approval Queue</h2>
+                <p class="panel-subtitle">Student applications awaiting warden decision</p>
+              </div>
+              <a href="admin-requests.html" class="text-link" style="font-size:0.8125rem;">View All Applications</a>
+            </div>
+            <div id="admin-pending-queue"></div>
+          </section>
+
+          <div class="dashboard-equal-split">
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Recent Applications</h2>
+                </div>
+                <a href="admin-requests.html" class="text-link" style="font-size:0.8125rem;">Manage Queue</a>
+              </div>
+              <div id="admin-recent-requests"></div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Recent Complaints</h2>
+                </div>
+                <a href="admin-complaints.html" class="text-link" style="font-size:0.8125rem;">Manage Tickets</a>
+              </div>
+              <div id="admin-recent-complaints"></div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="js/admin.js"></script>
+  </body>
+</html>

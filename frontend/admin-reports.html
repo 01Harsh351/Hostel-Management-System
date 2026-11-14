@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reports &amp; Analytics — UniStay Admin ERP</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="admin-reports">
+    <div class="erp-shell">
+      <aside id="erp-sidebar" class="erp-sidebar admin-sidebar"></aside>
+      <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+      <div class="erp-main">
+        <header id="erp-topbar" class="erp-topbar"></header>
+
+        <main class="erp-content">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">Reports &amp; Analytics</h1>
+              <p class="page-subtitle">CSS-powered visualizations of hostel occupancy, room capacity, request decisions, and maintenance closure.</p>
+            </div>
+          </div>
+
+          <div class="dashboard-equal-split">
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Hostel Occupancy Chart</h2>
+                  <p class="panel-subtitle">Assigned beds vs. total bed capacity per residence hall</p>
+                </div>
+              </div>
+              <div id="report-hostel-occupancy" class="panel-body"></div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Available vs. Full Rooms</h2>
+                  <p class="panel-subtitle">Active rooms with open seats vs. rooms at full capacity</p>
+                </div>
+              </div>
+              <div id="report-rooms-status" class="panel-body"></div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Room Allocation Request Outcomes</h2>
+                  <p class="panel-subtitle">Pending vs. Approved vs. Rejected distribution</p>
+                </div>
+              </div>
+              <div id="report-requests-status" class="panel-body"></div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header">
+                <div>
+                  <h2 class="panel-title">Maintenance Complaint Resolution</h2>
+                  <p class="panel-subtitle">Pending vs. Resolved maintenance tickets</p>
+                </div>
+              </div>
+              <div id="report-complaints-status" class="panel-body"></div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="js/admin.js"></script>
+  </body>
+</html>

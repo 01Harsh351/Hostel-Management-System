@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Room Requests — UniStay ERP</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="my-requests">
+    <div class="erp-shell">
+      <aside id="erp-sidebar" class="erp-sidebar"></aside>
+      <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+      <div class="erp-main">
+        <header id="erp-topbar" class="erp-topbar"></header>
+
+        <main class="erp-content">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">My Room Requests</h1>
+              <p class="page-subtitle">Track the review status and warden remarks for your hostel applications.</p>
+            </div>
+            <div class="page-actions">
+              <a href="room-application.html" class="btn btn-primary btn-sm">New Room Request</a>
+            </div>
+          </div>
+
+          <section class="panel">
+            <div class="panel-header">
+              <h2 class="panel-title">Application History</h2>
+              <div style="display:flex;align-items:center;gap:10px;">
+                <label for="my-requests-filter" class="sr-only">Filter by status</label>
+                <select id="my-requests-filter" class="form-control" style="min-height:36px;padding:5px 10px;width:auto;">
+                  <option value="All">All Statuses</option>
+                  <option value="Pending">Pending</option>
+                  <option value="Approved">Approved</option>
+                  <option value="Rejected">Rejected</option>
+                </select>
+              </div>
+            </div>
+            <div id="my-requests-table-wrap"></div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="js/student.js"></script>
+  </body>
+</html>

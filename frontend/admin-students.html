@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management — UniStay Admin ERP</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="admin-students">
+    <div class="erp-shell">
+      <aside id="erp-sidebar" class="erp-sidebar admin-sidebar"></aside>
+      <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+      <div class="erp-main">
+        <header id="erp-topbar" class="erp-topbar"></header>
+
+        <main class="erp-content">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">Student Management</h1>
+              <p class="page-subtitle">Directory of registered university students and their current hostel allocation status.</p>
+            </div>
+          </div>
+
+          <section class="filter-toolbar" aria-label="Student directory filters">
+            <div class="filter-controls">
+              <div class="filter-field">
+                <label for="admin-students-status">Allocation Status</label>
+                <select id="admin-students-status" class="form-control">
+                  <option value="All">All Statuses</option>
+                  <option value="Allocated">Allocated</option>
+                  <option value="Unallocated">Unallocated</option>
+                </select>
+              </div>
+              <div class="filter-field" style="flex:1;">
+                <label for="admin-students-search">Search Student</label>
+                <input id="admin-students-search" type="search" class="form-control" placeholder="Search by name, Student ID, or email..." />
+              </div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-header">
+              <h2 class="panel-title">Registered Students</h2>
+            </div>
+            <div id="admin-students-table-wrap"></div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="js/admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply for Hostel — UniStay ERP</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body data-page="room-application">
+    <div class="erp-shell">
+      <aside id="erp-sidebar" class="erp-sidebar"></aside>
+      <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+      <div class="erp-main">
+        <header id="erp-topbar" class="erp-topbar"></header>
+
+        <main class="erp-content">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">Hostel Room Application</h1>
+              <p class="page-subtitle">
+                Filter by hostel, hostel type, and room type to review capacity and apply for an available seat.
+              </p>
+            </div>
+            <div class="page-actions">
+              <a href="my-requests.html" class="btn btn-secondary btn-sm">View My Requests</a>
+            </div>
+          </div>
+
+          <section class="filter-toolbar" aria-label="Room application filters">
+            <div class="filter-controls">
+              <div class="filter-field">
+                <label for="filter-hostel">Hostel</label>
+                <select id="filter-hostel" class="form-control">
+                  <option value="">All Hostels</option>
+                </select>
+              </div>
+              <div class="filter-field">
+                <label for="filter-hostel-type">Hostel Type</label>
+                <select id="filter-hostel-type" class="form-control">
+                  <option value="">All Types</option>
+                  <option value="Boys">Boys Hostel</option>
+                  <option value="Girls">Girls Hostel</option>
+                </select>
+              </div>
+              <div class="filter-field">
+                <label for="filter-room-type">Room Type</label>
+                <select id="filter-room-type" class="form-control">
+                  <option value="">All Room Types</option>
+                  <option value="Single">Single (1 Bed)</option>
+                  <option value="Double">Double (2 Beds)</option>
+                  <option value="Triple">Triple (3 Beds)</option>
+                </select>
+              </div>
+              <div class="filter-field">
+                <label for="filter-availability">Room Status</label>
+                <select id="filter-availability" class="form-control">
+                  <option value="">All Statuses</option>
+                  <option value="Available">Available Only</option>
+                  <option value="Full">Full Rooms</option>
+                </select>
+              </div>
+              <div class="filter-field">
+                <label for="filter-search">Search Room</label>
+                <input id="filter-search" type="search" class="form-control" placeholder="e.g. N-205" />
+              </div>
+            </div>
+            <button type="button" id="reset-room-filters-btn" class="btn btn-secondary btn-sm">Reset</button>
+          </section>
+
+          <div id="rooms-count-summary" style="font-size:0.84375rem;color:var(--text-muted);font-weight:500;">
+            Loading room inventory...
+          </div>
+
+          <section id="rooms-grid" class="room-cards-grid" aria-label="Room cards"></section>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="js/rooms.js"></script>
+  </body>
+</html>
